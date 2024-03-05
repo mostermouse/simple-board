@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -27,5 +28,9 @@ public class ReplyService {
                 .build()
                 ;
         return replyRepository.save(entity);
+    }
+
+    public List<ReplyEntity> findAllByPostId(Long postId){
+        return replyRepository.findAllByPostIdAndStatusOrderByIdDesc(postId , "REGISTERED");
     }
 }
