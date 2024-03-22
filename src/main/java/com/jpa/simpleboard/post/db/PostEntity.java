@@ -1,5 +1,7 @@
 package com.jpa.simpleboard.post.db;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.jpa.simpleboard.board.db.BoardEntity;
 import com.jpa.simpleboard.reply.db.ReplyEntity;
 import jakarta.persistence.*;
 import lombok.*;

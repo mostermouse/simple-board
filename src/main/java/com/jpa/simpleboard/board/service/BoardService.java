@@ -21,4 +21,5 @@ public class BoardService {
                 ;
         return boardRepository.save(entity);
     }
+
 }
